@@ -1,0 +1,34 @@
+<app-login (isValidPasswords)="isAllowAccess = $event"></app-login>
+<div
+  *ngIf="isAllowAccess"
+  id="container"
+  class="container">
+  <div class="speech">Put the text to cipher in the input</div>
+  <div class="wrapper">
+    <div class="label">Text:</div>
+    <input
+      type="text"
+      class="input"
+      name="cypher"
+      [(ngModel)]="cypher"/>
+    <div class="label"> Offset:</div>
+    <input
+      type="number"
+      class="input"
+      value="3"
+      name="offset"
+      [(ngModel)]="offset"/>
+    <div class="buttons">
+      <button
+        name="encrypt"
+        class="btn"
+        (click)="handleEncrypt()">Encrypt
+      </button>
+      <button
+        name="decrypt"
+        class="btn"
+        (click)="handleDecrypt()">Decrypt
+      </button>
+    </div>
+  </div>
+</div>

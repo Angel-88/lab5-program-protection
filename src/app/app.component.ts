@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lab5-program-protection';
+
+  constructor() {
+  }
+
+  ngOnInit() {
+  }
+
 }

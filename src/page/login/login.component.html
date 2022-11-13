@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <h1>Перевірка пароля</h1>
+  <div class="container">
+    <div
+      *ngIf="isInvalid && !isBlocked"
+      class="error-password-title">
+      Невдала спроба, спробуй ще раз, залишилось {{5 - attemptCount}} спроби(а)!
+    </div>
+    <div
+      *ngIf="isBlocked"
+      class="error-password-title">
+      Доступ заблоковано, спроби вичерпано!
+    </div>
+    Password:
+    <input
+      type="password"
+      (keydown.enter)="handleLogin()"
+      [(ngModel)]="password">
+    <button (click)="handleLogin()">Login</button>
+  </div>
+</div>
+
+
+
+
