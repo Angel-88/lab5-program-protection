@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class CaesarCipherComponent implements OnInit {
   cypher!: string;
-  offset!: number;
+  offset = 3;
   alphabet = 'abcdefghijklmnopqrstuvwxyzабвгдеєжзиіїйклмнопрстуфхцчшщьюя0123456789!?., ';
   fullAlphabet!: string;
   isAllowAccess = false;

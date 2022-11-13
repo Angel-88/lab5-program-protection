@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-login',
@@ -20,14 +21,14 @@ export class LoginComponent {
   }
 
   handleLogin() {
-    if (this.password === 'Niva') {
+    if (this.password === environment.passwordAdmin) {
       this.isInvalid = false;
       this.isValidPasswords.emit(true);
 
       return;
     }
 
-    if (this.password !== 'Niva' && this.attemptCount <= 5) {
+    if (this.password !== environment.passwordAdmin && this.attemptCount <= 5) {
       this.isInvalid = true;
       this.attemptCount++;
     }

@@ -1,4 +1,4 @@
-<app-login (isValidPasswords)="isAllowAccess = $event"></app-login>
+<app-login *ngIf="!isAllowAccess" (isValidPasswords)="isAllowAccess = $event"></app-login>
 <div
   *ngIf="isAllowAccess"
   id="container"
@@ -15,7 +15,6 @@
     <input
       type="number"
       class="input"
-      value="3"
       name="offset"
       [(ngModel)]="offset"/>
     <div class="buttons">

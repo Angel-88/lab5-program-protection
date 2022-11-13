@@ -30,11 +30,6 @@ input {
   margin-bottom: 16px;
 }
 
-/* Стиль кнопки отправки */
-input[type=submit] {
-  background-color: #4CAF50;
-}
-
 label {
   font-size: 22px;
   color: #4f4c95;
@@ -48,46 +43,14 @@ label {
   border-radius: 10px;
 }
 
-/* Окно сообщения отображается, когда пользователь нажимает на поле пароля */
-#message {
-  display: none;
-  background: #f1f1f1;
-  color: #000;
-  position: relative;
-  padding: 20px;
-  margin-top: 10px;
-  border-radius: 10px;
-}
-
-h3 {
+.btn-login {
+  margin-left: 10px;
   font-size: 20px;
-  color: #4f4c95;
-  font-weight: bold;
+  padding: 8px 10px;
+  background: #4f4c95;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+ border: none;
 }
 
-#message p {
-  padding: 10px 35px;
-  font-size: 18px;
-}
-
-/* Добавьте зеленый цвет текста и галочку, когда требования верны */
-.valid {
-  color: green;
-}
-
-.valid:before {
-  position: relative;
-  left: -35px;
-  content: "✔";
-}
-
-/* Добавьте красный цвет текста и букву "x", когда требования неверны */
-.invalid {
-  color: red;
-}
-
-.invalid:before {
-  position: relative;
-  left: -35px;
-  content: "✖";
-}
